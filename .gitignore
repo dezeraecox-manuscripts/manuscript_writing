@@ -1,14 +1,6 @@
 # log files
 *.log
 
-# Raw data
-/Raw_data/*
-
-# Generated Results
-/Flow_results/*
-/ImageJ_results/*
-/Python_results/*
-
 # Annoying Office temp files
 *~$*
 ~WR*
