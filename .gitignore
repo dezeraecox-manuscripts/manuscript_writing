@@ -17,3 +17,6 @@ data_and_analyses/*
 
 # resources
 resources/*
+
+# archive
+archive/*

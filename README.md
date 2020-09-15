@@ -2,6 +2,35 @@
 
 Welcome to the template repository for building scientific manuscripts with version control. This template was created to efficiently setup a new Git repository when creating a scientific manuscript to be tracked with version control.
 
+## Basic layout
+
+- [scripts](scripts/)
+  - Utility script for [collecting data and analyses](scripts/data_collection.py) repositories from existing github directories
+  - Utility scripts for generating [figure panels](scripts/figure_panels.py), [layouts](scripts/figure_layouts.py) and [exporting to png](scripts/figure_to_text.py) files for use in the text drafting process
+  - [pandoc commands](scripts/pandoc_commands.md) contains various terminal commands to assist with converting ```.md``` to ```.docx```
+  - Also contains a template script for [initialising the subfolders](scripts/initialise_subfolders.py) that do not necessarily need to be tracked by git (although these currently have placeholders to make them visibile in the template repository)
+- [text](text/)
+  - Contains current markdown and docx version of the manuscript, labelled as current version number
+  - When incrementing version, markdown file is renamed (with no other changes) prior to exporting the docx version that will be transfered to the [collaborators edits](collaborators_edits/) folder.
+  - [reference.docx](text/reference.docx) is the template document for pandoc export and SHOULD NOT BE RENAMED. Any changes to the internal styles of this document dictate the final export version from pandoc.
+- [figures](figures/)
+  - Will contain folders (F1_name) where individual figure panels (panel_#.svg) are collected. Panels should be collected using the [figure_panels](scripts/figure_panels.py) script. 
+  - Optionally, the figure layouts for each figure (figure_#.svg) can be created using the [figure_layouts](scripts/figure_layouts.py) script.
+- [data_and_analyses](data_and_analyses/)
+  - Will contain each experimental repository that will contribute analyses for the figures. Repositories are initialised into this folder using the [data_collection](scripts/data_collection.py) script.
+  - Also contains [resources](data_and_analysis/resources/) folder for any databases/additional resources that pertain to the analyses are stored. Note that these analyses are not tracked via version control, however the [resources index](data_and_analysis/resources/resources.md) file is to ensure a record of the relevant resources.
+- [collaborators_edits](collaborators_edits/)
+  - contains all ```.docx``` versions of the manuscript labelled with manuscript shortname and version identifier
+  - also contains [version index](collaborators_edits/version_index.md) which lists all versions that have been created, and who interacts with these versions (i.e. when they are sent to and returned from collaborators) 
+- [resources](resources/)
+  - Contains any additional references or useful info for use during the text drafting process. Note that these resources are not tracked via version control, however the [resources index](resources/resources.md) file is to ensure a record of the relevant resources.
+- [archive](archive/)
+  - recycling folder for anything deemed no longer relevant. Note that the folder is not tracked via git, although any files originally tracked by git and moved into this folder will continue to be tracked.
+- [manuscript_README](manuscript_README.md) file is to be renamed as README.md to overwrite this file when creating a new repository, and tracks draft status
+- [markdownlint.json](markdownlint.json) specifies linting rule to be ignored when drafting text in markdown
+- [.gitignore](.gitignore) standard gitignore format
+- [README.md](README.md) this explainer file, which should be removed and replaced with manuscript-tracking README
+
 ## Before you start
 
 Using this format makes the following assumptions:
