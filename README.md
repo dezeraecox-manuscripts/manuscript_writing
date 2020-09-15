@@ -1,18 +1,8 @@
-# Manuscript Running Title
+# Manuscript Template Repository
 
-This repository contains the draft materials, analysis code and data associated with the manuscript entitled "title".
+Welcome to the template repository for building scientific manuscripts with version control.
 
-## Current status
-
-- [ ] initialise repository
-- [ ] collect data and analyses
-- [ ] initialise first draft text
-- [ ] collaborators edits
-- [ ] first submission
-- [ ] reviewers response
-- [ ] final submission
-- [ ] published
+This template was to ease the creation and formatting of a repository when generating scientific manuscripts. Using this format makes the following assumptions:
 
 
-## References & Resources
-
+*Disclaimer: this template repository was designed for personal use and is provided as-is. Whilst I endeavour to keep it up-to-date and respond to issues raised here,  I can provide no guarantee of the completeness, accuracy, reliability, suitability or availability of the information, services and software contained here for your use case.*
