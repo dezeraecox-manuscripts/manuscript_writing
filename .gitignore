@@ -20,3 +20,6 @@ resources/*
 
 # archive
 archive/*
+
+# archive
+versions/*
