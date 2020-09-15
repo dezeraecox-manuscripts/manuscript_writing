@@ -1,8 +1,9 @@
 # Resources
 
-## Resource #
+## 2020-09-15 Resource *short_name*
 
-**Type**: database, reference, supp_data, other
-**Date retrieved**: ##/##/##
-**Retreived via**: program, manual
-**Notes**: extra information
+**Filename**: *filename or folder_info*
+**Type**: *database, reference, supp_data, other*
+**Date retrieved**: *YYYY*-*MM*-*DD*
+**Retreived via**: *manual_location, script_name*
+**Details**: *notes*
