@@ -38,3 +38,7 @@ fig_1 = Figure("15cm", "15cm",
 
 # fig_1.save(output_path)
 
+# Labelling scheme for other figure types
+output_path = 'figures/S1_figure name/figure_S1.svg'
+output_path = 'figures/T1_table name/table_1.xlsx'
+output_path = 'figures/ST1_table name/table_S1.xlsx'
