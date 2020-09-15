@@ -37,12 +37,13 @@ Using this format makes the following assumptions:
 
 1. The experimental analyses to be included in the manuscript have their own independent github repositories, and will continue to be tracked via their own git repositories using a "manuscript" branch for development from within the data_and_analyses folder.
 2. Only changes to the manuscript components are tracked via this repository, such as text and figures
-3. Text drafts will be compiled in markdown, using citation support from [Zotero](https://www.zotero.org/)
+3. Text drafts will be compiled in markdown, and exported to ```.docx``` format.
 
 Using the complete functionality requires the following dependencies:
 
 - [Inkscape](https://inkscape.org/) - free vector graphics editor
 - [Pandoc](https://pandoc.org/)
+- 
 - Microsoft Office (specifically Word for editing the reference document)
 
 In addition, the general workflow underlying this repository was conceived to integrate with [VSCode](https://code.visualstudio.com/) and you may find some of the following extensions useful:
@@ -55,17 +56,38 @@ In addition, the general workflow underlying this repository was conceived to in
 - Zotero citation picker
 - Pandoc Citer
 
-## Basic Setup
+## Initial Setup
 
+To get started, clone this repository using GitHub's 'use template' option. The following initial cleanup steps are recommended:
+
+- remove the ```.txt``` placeholder files: [archive](archive\archive.txt), [for_powerpoint_outlines](figures\outlines\for_powerpoint_outlines.txt) and [for_svg_fig_pieces](figures\utilities\for_svg_fig_pieces.txt)
+- Remove this README.md file, and relabel [manuscript_README.md](manuscript_README.md) as ```README.md```
+- Update the details of the README.md file, including the manuscript running title and any additional information
+- Update the name of the [shortname_v#.#.md](text/shortname_v#.#.md) file with the manuscript's running title, and set the version to 0.1
 
 
 ## General Workflow
 
+### Data collection
 
+You are now ready to begin constructing the [data_and_analysis](data_and_analysis/) folder using the [data_collection](scripts/data_collection.py) script. 
+
+### Figure creation, including export to png
+
+- 
+
+### Text drafts, including figure captions and referencing
+
+- 
+
+### Export to docx and versioning
+
+- 
 
 ## Additional Information
 
-
+- inserting changes from collaborators
+- 
 
 ## Disclaimer
 
