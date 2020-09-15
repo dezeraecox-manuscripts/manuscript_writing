@@ -11,3 +11,9 @@
 # ignoring git files
 *.gitconfig
 .gitattributes
+
+# data and analyses
+data_and_analyses/*
+
+# resources
+resources/*
