@@ -65,10 +65,20 @@ panel_paths = {
 
 # collect_panels(panel_paths, output_path)
 
+# Table 1: Table datasets
+output_path = f'{output_folder}T1_data/'
+supp_paths = {
+    'table_1.xlsx': 'path_to_fle.xlsx'
+    }
+
+# collect_supp(supp_paths, output_path)
 
 """Collect supp info and deposit here for editing. ONLY cosmetic edits can be performed manually once inside this folder. Consider eventually using pylustrator and svgutils to completely automate the figure construction process"""
 
-# Supp Table 1: Supp datasets
-output_path = f'{output_folder}T1_data/'
-supp_paths = {'supplementary_table_S1.xlsx': 'path_to_fle.xlsx'}
-collect_supp(supp_paths, output_path)
+# Supp Table 1: Supplementary datasets
+output_path = f'{output_folder}ST1_data/'
+supp_paths = {
+    'table_1.xlsx': 'path_to_fle.xlsx'
+    }
+
+# collect_supp(supp_paths, output_path)
