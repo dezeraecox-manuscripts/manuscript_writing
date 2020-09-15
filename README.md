@@ -62,8 +62,8 @@ To get started, clone this repository using GitHub's 'use template' option. The 
 
 - remove the ```.txt``` placeholder files: [archive](archive\archive.txt), [for_powerpoint_outlines](figures\outlines\for_powerpoint_outlines.txt) and [for_svg_fig_pieces](figures\utilities\for_svg_fig_pieces.txt)
 - Remove this README.md file, and relabel [manuscript_README.md](manuscript_README.md) as ```README.md```
-- Update the details of the README.md file, including the manuscript running title and any additional information
-- Update the name of the [shortname_v#.#.md](text/shortname_v#.#.md) file with the manuscript's running title, and set the version to 0.1
+- Update the details of the new README.md file, including the manuscript running title and any additional information
+- Update the name of the [template markdown](text/shortname_v#.#.md) file ```shortname_v#.#.md``` with the manuscript's running title
 
 
 ## General Workflow
