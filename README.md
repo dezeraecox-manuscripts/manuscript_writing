@@ -1,6 +1,6 @@
 # Manuscript Template Repository
 
-Welcome to the template repository for building scientific manuscripts in markdown with version control. This repository contains an example layout, template files and general-purpose scripts to automate many of the steps in structuring and organising a manuscript folder.
+Welcome to the template repository for building scientific manuscripts in markdown with version control. This repository contains an example layout, template files and general-purpose scripts to automate many of the steps in structuring and organising a manuscript folder, generating figures and creating/editing text documents.
 
 ## Basic layout
 
