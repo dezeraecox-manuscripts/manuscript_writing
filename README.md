@@ -21,6 +21,8 @@ Welcome to the template repository for building scientific manuscripts in markdo
   - Also contains [resources](data_and_analysis/resources/) folder for any databases/additional resources that pertain to the analyses are stored. Note that these analyses are not tracked via version control, however the [resources index](data_and_analysis/resources/resources.md) file is to ensure a record of the relevant resources.
 - [versions](versions/)
   - contains all ```.docx``` versions of the manuscript labelled with manuscript shortname and version identifier
+  - for edits from collaborators, these are appended with collaborators initials and 
+  - by defaults, this folder is not tracked via git to avoid exceeding the github file size limits, however the index file is. In addition, when incrementing versions in the index file, the commit will be tagged with a version identifier. 
   - also contains [version index](versions/version_index.md) which lists all versions that have been created, and who interacts with these versions (i.e. when they are sent to and returned from collaborators) 
 - [resources](resources/)
   - Contains any additional references or useful info for use during the text drafting process. Note that these resources are not tracked via version control, however the [resources index](resources/resources.md) file is to ensure a record of the relevant resources.
@@ -74,19 +76,37 @@ You are now ready to begin constructing the [data_and_analysis](data_and_analysi
 
 ### Figure creation, including export to png
 
-- 
+- Once individual figure panels have been created within individual data and analyses repositories, complete the [figures_panel](scripts/figure_panels.py) script to copy and rename the relevant panels into [figures](figures/)
+ directory
+- Changes made to individual figure panels within this folder should only be cosmetic
+- From here, either use [figure_layouts](scripts/figure_layouts.py) to generate the complete figures using ```svgutils``` or manually create compiled svg files within each folder for ```figure_1```, ..., ```figure_S1``` etc
+- Again, only cosmetic changes should be made within these files
+- Once complete, copy the finalised figures from figures to the [text](text/figures/) folder, and export to ```.png``` using [figure_to_text](scripts/figure_to_text.py)
 
 ### Text drafts, including figure captions and referencing
 
-- 
+- Complete text draft within the [shortname_v0.1.md](text/shortname_v0.1.md) document, including adding figure captions, figure references and resource references as per pandoc format
+- Example formats of interest:
+  - Reference: ```[@citekey]```
+  - Figure caption: ```![**title**. details.](path){#fig:shortname}```
+  - Intext figure reference: ```(Fig. {@fig:short_name}panel)```
+  - Supp figure caption: ```![**title**. details.](path){#fig:shortname secno=2}```
+- For more information, see [syntax guide](https://maehr.github.io/academic-pandoc-template/markdown.html))
 
 ### Export to docx and versioning
 
-- 
+- When ready to generate a version for collaborators/submission:
+    1. Add version information to pandoc code commented at the end of the ```.md``` file
+    2. Complete the version index with updated version information
+    3. Commit the version index and manuscript with the version tag in the commit
+    4. Open new terminal and complete pandoc export using the updated command, placing the exported doc version into the [versions](versions/) folder
+    5. Make any final updates to the ```.docx``` version of the manuscript in the versions folder (simple cosmetic updates are often necessary at this stage)
+- Version is now ready to share with collaborators/submit as necessary
 
 ## Additional Information
 
-- inserting changes from collaborators
+- Inserting changes from collaborators who use track changes in ```.docx``` format remains a sticking point in this workflow - the reverse conversion from ```.docx``` to markdown is imperfect and the individual word-level changes given by track changes are difficult to implement. For now, the simplest solution has been to copy individual chunks of edited text into the ```.md``` version, to preserve the citation entries.
+- You can find more information on tagging git commits [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
 - 
 
 ## Disclaimer
