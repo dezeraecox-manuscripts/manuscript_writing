@@ -1,18 +1,21 @@
 ---
 title: title
 author: Dezerae Cox^1^, Author Two^1,2^, Author Three^1^
-date: Month, Year
+zotero:
+    csl-style: cell
 ---
 
 ^1^ Department of Biochemistry and Molecular Biology and Bio21 Molecular Science and Biotechnology Institute, The University of Melbourne, Parkville, VIC 3010, Australia
 
 ^2^ Affiliation Two
 
-*Keywords*:  
-
 ## Abstract
 
 Abstract text
+
+## Keywords
+
+*Keyword 1, Keyword 2*
 
 ## Introduction
 
@@ -45,6 +48,7 @@ Results text referencing (Fig. {@fig:fig_name_2}panel_A).
 ![**Title**. Figure legend referencing panels (A).](figures/figure_1.png){#fig:fig_name_2}
 
 ## Discussion
+
 Discussion text.
 
 ## Supplementary Figures
@@ -60,13 +64,13 @@ Discussion text.
 ## Author Contributions
 
 D.C.
-G.E.R.
-N.N.
-D.M.H.
+A.2.
+A.3.
 
 ## Funding Acknowledgement
 
+
+
 ## References
 
-<!--
-pandoc -f markdown -t docx --reference-doc reference.docx -o YYMMDD_Draft_v##.docx Draft_v##.md --filter pandoc-fignos --bibliography=zotero_library.bib
+

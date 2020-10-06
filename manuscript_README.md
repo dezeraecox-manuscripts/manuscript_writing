@@ -7,6 +7,8 @@ This repository contains the draft materials, analysis code and data associated 
 - [ ] initialise repository
 - [ ] collect data and analyses
 - [ ] initialise first draft text
+- [ ] collect reference library
+- [ ] complete first draft, increment version 1
 - [ ] collaborators edits
 - [ ] first submission
 - [ ] reviewers response

@@ -45,7 +45,7 @@ Using the complete functionality requires the following dependencies:
 
 - [Inkscape](https://inkscape.org/) - free vector graphics editor
 - [Pandoc](https://pandoc.org/)
-- 
+- [Zotero](https://www.zotero.org/) with the [ZotFile](http://zotfile.com/) and [BetterBibTex](https://retorque.re/zotero-better-bibtex/) tools installed, and the 
 - Microsoft Office (specifically Word for editing the reference document)
 
 In addition, the general workflow underlying this repository was conceived to integrate with [VSCode](https://code.visualstudio.com/) and you may find some of the following extensions useful:
@@ -55,7 +55,7 @@ In addition, the general workflow underlying this repository was conceived to in
 - Markdown Table Prettifier
 - Excel to Markdown table
 - Code Spell Checker
-- Zotero citation picker
+- [Zotero citation picker](https://marketplace.visualstudio.com/items?itemName=mblode.zotero)
 - Pandoc Citer
 
 ## Initial Setup
@@ -83,15 +83,42 @@ You are now ready to begin constructing the [data_and_analysis](data_and_analysi
 - Again, only cosmetic changes should be made within these files
 - Once complete, copy the finalised figures from figures to the [text](text/figures/) folder, and export to ```.png``` using [figure_to_text](scripts/figure_to_text.py)
 
-### Text drafts, including figure captions and referencing
+### Text drafts
 
-- Complete text draft within the [shortname_v0.1.md](text/shortname_v0.1.md) document, including adding figure captions, figure references and resource references as per pandoc format
+- Complete text draft within the [shortname_v0.1.md](text/shortname_v0.1.md) document
+- General markdown syntax can be used to add italicised, bold text etc and to delineate sections using heading styles
+- In addition, latex can be used for symbols and inline math which will be converted to inline
+
+- Examples include:
+  - ^2^ superscript
+  - ~2~ subscript
+  - $\alpha$ or $\beta$ or β
+
+#### Figure captions
+
+- Figures should be generated withint the ```figures``` folder, and the ```figure_to_text.py``` script used to then copy relevant the files (and convert ```.svg``` to ```.png``` as appropriate)
+- The figures and associated captions can be inserted using pandoc format and relative paths to the figures folder
+- In-text references to the figure can then be included which will be converted to linked references
+- For more information, see [syntax guide](https://maehr.github.io/academic-pandoc-template/markdown.html))
+
 - Example formats of interest:
-  - Reference: ```[@citekey]```
-  - Figure caption: ```![**title**. details.](path){#fig:shortname}```
+  - Figure caption: ```![**title**. details.](figures/figure_1.png){#fig:shortname}```
   - Intext figure reference: ```(Fig. {@fig:short_name}panel)```
   - Supp figure caption: ```![**title**. details.](path){#fig:shortname secno=2}```
-- For more information, see [syntax guide](https://maehr.github.io/academic-pandoc-template/markdown.html))
+
+#### Referencing with Zotero and BetterBibTex
+
+- Before inserting references, you need to generate a copy of your Zotero library (or references of interest) as a ```.json``` style bibtex file, which can be exported from Zotero using ```File``` -> ```Export library``` -> ```Better CSL JSON``` with the ```Keep updated``` option checked (this will append cite keys for newly-added documents to your library automatically)
+- Citations can then be included inline in plain text using the citation picker e.g. [@cox2020]
+- When converting to ```.docx```, custom filter will then generate live citation fields using the style stipulated in the header yml in the draft text (default is currently set to Cell style, additional CSL styles can be found [here](https://www.zotero.org/styles)).
+- The BetterBibTEx custom pandoc filter ```zotero.lua``` is included in the text folder by default. If you need a fresh download, it can be found [here](https://retorque.re/zotero-better-bibtex/exporting/zotero.lua).
+
+#### Continuous preview using VSCode
+
+- As mentioned above, this workflow is designed to use VSCode, and in particular it provides the ability to preview rendered versions of the output live in the editor
+- When getting started with the vscode-pandoc extensions, open the user settings and under ```Pandoc Options``` add the ```reference.docx``` to the Docx Opt String, which will render test output using the template file
+- Under ```Pandoc Markdown Preview```, add the following options to the ```Extra Pandoc Arguements``` field: ```--filter pandoc-fignos --bibliography=zotero.json --lua-filter=zotero.lua```
+- Now, to live-preview the markdown document inside the editor ```Ctrl+Shift+R```, or to preview the exported document  ```Ctrl+K, P``` and choose format of interest
 
 ### Export to docx and versioning
 
