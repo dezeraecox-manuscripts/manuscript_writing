@@ -3,4 +3,6 @@
 pandoc --print-default-data-file reference.docx > reference.docx
 
 - to convert word to md
-pandoc -t markdown -f docx --reference-doc reference.docx -o draft.md draft.docx --filter pandoc-fignos --bibliography=zotero_library.bib --filter pandoc-citeproc --track-changes=accept --extract-media=figures
+pandoc -t markdown -f docx --reference-doc reference.docx -o draft.md draft.docx --filter pandoc-fignos --bibliography=zotero_library.bib --filter pandoc-citeproc --track-changes=accept --extract-media=figures --wrap=none
+
+pandoc -f markdown -t docx --reference-doc reference.docx -o draft.docx draft.md --filter pandoc-fignos --bibliography=zotero.json --lua-filter=zotero.lua
