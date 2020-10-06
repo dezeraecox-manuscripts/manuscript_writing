@@ -14,5 +14,12 @@ This repository contains the draft materials, analysis code and data associated 
 - [ ] published
 
 
+## Experiment repositories
+
+The following repositories are collected here under the data and analysis folder, and all further analyses associated with this manuscript will be versioned under the ```manuscript_<shortname>```branch.
+
+- [repository_name](repository_link)
+
+
 ## References & Resources
 

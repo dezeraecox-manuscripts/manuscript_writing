@@ -10,7 +10,7 @@ e.g. the figure copying and conversion steps, pandoc md-->docx steps"""
 
 folders = [
     'archive',
-    'collaborators_edits',
+    'versions',
     'resources',
     'data_and_analyses',
     'data_and_analyses/resources',
