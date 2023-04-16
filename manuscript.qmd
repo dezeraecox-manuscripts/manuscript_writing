@@ -1,76 +1,141 @@
 ---
-title: title
-author: Dezerae Cox^1^, Author Two^1,2^, Author Three^1^
-zotero:
-    csl-style: cell
+title: A very important article.
+runningtitle: Short running title.
+runningauthor: Doe & Doe.
+author:
+  - name: Jane Doe
+    url: https://example.com
+    orcid: 0000-0000-0000-0000
+    affiliations:
+      - id: some-inst
+        name: Institute for Cool Things
+        url: https://example.com
+      - id: some-uni
+        name: University of Awesome Research
+        url: https://example.com
+    email: corresponding email
+  - name: John Doe
+    affiliations:
+      - ref: some-inst
+abstract: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+bibliography: resources/references.bib
+# Fundamental settings
+license: CC BY
+keywords:
+  - Research
+  - Cool Stuff
+format:
+  basic-pdf
+    # classoption: # To turn on line numbers, uncomment this class option and add a colon to the line above
+    #   - lineno 
+colorlinks: true
+link-citations: true
+keep-tex: true
+mainfont: Calibri
+
 ---
 
-^1^ Department of Biochemistry and Molecular Biology and Bio21 Molecular Science and Biotechnology Institute, The University of Melbourne, Parkville, VIC 3010, Australia
+# Introduction
 
-^2^ Affiliation Two
+This template is based on the Overleaf template provided by the Biophysical Journal and uses modifications to this template provided by [Quarto Journals](https://github.com/quarto-journals/biophysical-journal).
 
-## Abstract
-
-Abstract text
-
-## Keywords
-
-*Keyword 1, Keyword 2*
-
-## Introduction
-
-Introduction text with a [@reference].
-
-## Methods
-
-### Materials
-
-Materials text
-
-### Statistical analysis and data availability
-
-Statistical analyses were performed either using the scipy module in python [@virtanen2020] or using GraphPad Prism (v 8.4.3). The exact *p* values, raw values and statistical details are provided in (Supplementary Table {@fig:supp_stats}).
-
-The mass spectrometry proteomics data have been deposited to the ProteomeXchange Consortium via the PRIDE63 partner repository with the data set identifier **\#**. All other data are available from **\#**. <!--Insert dataset details here-->
-
-## Results
-
-### Results section 1
-
-Results text referencing (Fig. {@fig:fig_name_1}panel_A).
-
-![**Title**. Figure legend referencing panels (A).](figures/figure_1.png){#fig:fig_name_1}
-
-### Results section 2
-
-Results text referencing (Fig. {@fig:fig_name_2}panel_A).
-
-![**Title**. Figure legend referencing panels (A).](figures/figure_1.png){#fig:fig_name_2}
-
-## Discussion
-
-Discussion text.
-
-## Supplementary Figures
-
-![**Title.** Legend.](figures/figure_S1.png){#fig:supp_fig secno=2}
-
-## Supplementary information:
-
-![**Table S1: Legend**](figures/supplementary_table_S1){#fig:supp_dataset secno=3}
-
-![**Table S2: Statistical analyses summary**](figures){#fig:supp_stats secno=3}
-
-## Author Contributions
-
-D.C.
-A.2.
-A.3.
-
-## Funding Acknowledgement
+Your introduction goes here.
 
 
+# Materials and Methods
 
-## References
+Your methods go here.
+
+
+# Results
+
+
+Some examples of commonly used commands and features are listed below, to help you get started.
+
+Leave a blank line between blocks of text to start a new paragraph.
+
+References can be included between square brackets using the citation keys available in your references.bib, for example we are using quarto [@quarto].
+
+Figures and Tables can be referenced in line like this @tbl-numbers.
+
+Quarto is also great at typesetting mathematics using LaTeX:
+
+  Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically
+  distributed random variables with $\text{E}[X_i] = \mu$ and
+  $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+  $$
+  S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+        = \frac{1}{n}\sum_{i}^{n} X_i
+  $${#eq-clt}
+  denote their mean.
+  Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge
+  in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+  Thus concludes the explanation about @eq-clt.
+
+
+# Discussion
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+# Conclusion
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+explicabo.
+
+# Author Contributions
+
+Author1 designed the research. Author2 carried out all simulations,
+analyzed the data. Author1 and Author2 wrote the article.
+
+# Declaration of Interest
+
+The authors declare no competing interests.
+
+# Acknowledgments
+
+We thank Dr Smith for their help.
+
+# References
+
+:::{#refs}
+:::
+
+
+## Figures and Tables
+
+Here is a table (or not, this is LaTeX, so it will put it wherever it wants. "Here" is very relative...).
+
+|Thing   | Value  |
+|:-------|-------:|
+|A 42    |      18|
+|B 15    |      18|
+|C 34    |      17|
+|D 99    |      24|
+
+: This is the table caption. Look, numbers! You can allow this table to be referenced elsewhere in the document by including a tag. {#tbl-numbers}
+
+
+You may prefer to include tables and figures directly in the relevant results sections - this is fine! The syntax is the same, and the labels will be updated automatically. 
+
+You can add a page break directly using:
+
+\NewPage
+
+# Supplementary Material
+
+I like to store supplementary figures in a separate file, such that the standalone PDF containing the supplementary info can be independently created. However, to make the supplementary figures referenceable here we need to include them!
+
+First, we reset the figure and table counter using the following command:
+
+\beginsupplement
+
+Then, add the supplementary figures.
+
+{{< include suppfigures.qmd >}}
+
+
 
 
