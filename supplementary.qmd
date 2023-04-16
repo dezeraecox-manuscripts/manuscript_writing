@@ -1,0 +1,33 @@
+---
+title: Supplementary Information.
+author:
+  - name: Jane Doe
+    url: https://example.com
+    orcid: 0000-0000-0000-0000
+    affiliations:
+      - id: some-inst
+        name: Institute for Cool Things
+        url: https://example.com
+      - id: some-uni
+        name: University of Awesome Research
+        url: https://example.com
+    email: corresponding email
+  - name: John Doe
+    affiliations:
+      - ref: some-inst
+bibliography: resources/references.bib
+# Fundamental settings
+license: CC BY
+format:
+  basic-pdf
+    # classoption: # To turn on line numbers, uncomment this class option and add a colon to the line above
+    #   - lineno 
+link-citations: true
+mainfont: Calibri
+
+---
+
+{{< include figures/suppfigures.qmd >}}
+
+
+

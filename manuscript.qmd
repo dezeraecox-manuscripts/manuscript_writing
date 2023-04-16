@@ -134,7 +134,7 @@ First, we reset the figure and table counter using the following command:
 
 Then, add the supplementary figures.
 
-{{< include suppfigures.qmd >}}
+{{< include figures/suppfigures.qmd >}}
 
 
 
