@@ -1,0 +1,20 @@
+title: basic
+author: Dezerae Cox
+version: 0.1.0
+contributes:
+  format:
+    common:
+      csl: basic.csl
+    pdf:
+      number-sections: false
+      papertype: Article
+      indent: false
+      template-partials:
+        - ./partials/doc-class.tex
+        - ./partials/title.tex
+        - ./partials/before-body.tex
+      format-resources:
+        - ./basic.csl
+        - ./basic.cls
+      include-in-header:
+        - "header.tex"
